@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class Jpm {
+private class Jpm {
     private String[] _args;
     private int _index = 1;
     public static void main(String[] args) throws Exception {
@@ -55,7 +55,7 @@ public class Jpm {
         System.out.println("\tbuild - This command builds your project");
     }
 
-    private void build() {
+    public void build() {
         new BuildCommand().run();
     }
 
@@ -89,7 +89,7 @@ public class Jpm {
         new PublishCommand(jars).run();
     }
 
-    private void install() {
+    public void install() {
         new InstallCommand().run();
     }
 
